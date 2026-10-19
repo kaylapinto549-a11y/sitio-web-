@@ -2,10 +2,10 @@
     --vino: #C17C91;
     --vino2: #D69BAD;
     --rosa: #F2C6D2;
-    --rosa2: #F8E5EA;
-    --fondo: #c98888;
+    --rosa2: #FCEEF1;
+    --fondo: #FFFAFA;
     --texto: #4A2936;
-    --blanco: #FFFCFA;
+    --blanco: #FFFFFF;
 }* {
     box-sizing: border-box;
     margin: 0;
