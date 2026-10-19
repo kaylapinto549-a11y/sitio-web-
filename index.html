@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kayla Boutique | Moda femenina</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700&family=Allura&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="anuncio">
+        ✦ NUEVA COLECCIÓN ✦ MODA FEMENINA ✦ ENVÍOS A TODO COLOMBIA ✦
+    </div>
+
+    <header class="encabezado">
+        <a href="#inicio" class="logo">
+            KAYLA<span>♡</span>
+            <small>B O U T I Q U E</small>
+        </a>
+
+        <button class="menu" id="menu" aria-label="Abrir menú">☰</button>
+
+        <nav id="nav">
+            <a href="#inicio">Inicio</a>
+            <a href="#categorias">Categorías</a>
+            <a href="#catalogo">Catálogo</a>
+            <a href="#ubicacion">Ubicación</a>
+        </nav>
+
+        <a class="comprar" href="#catalogo">Comprar ♡</a>
+    </header>
+
+    <main>
+        <!-- PORTADA -->
+        <section class="hero" id="inicio">
+            <div class="hero-texto">
+                <p class="etiqueta">TU NUEVO LUGAR FAVORITO</p>
+
+                <h1>VISTE TU<br><em>ESENCIA</em> ♡</h1>
+
+                <p>
+                    Prendas que enamoran, detalles que destacan
+                    y estilos para expresar quién eres.
+                    Encuentra tu próximo look en Kayla Boutique.
+                </p>
+
+                <a class="boton" href="#catalogo">
+                    DESCUBRIR COLECCIÓN →
+                </a>
+
+                <div class="detalles">
+                    ♡ Moda femenina · ✧ Estilo único · ♡ Compra fácil
+                </div>
+            </div>
+
+            <div class="hero-foto">
+                <img
+                    src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1100&q=90"
+                    alt="Modelo luciendo un look de moda femenina"
+                >
+
+                <div class="nota">
+                    Tu estilo<br>habla por ti ♡
+                </div>
+
+                <span class="sello">
+                    NUEVA<br>COLECCIÓN
+                </span>
+            </div>
+        </section>
+
+        <!-- CATEGORÍAS -->
+        <section class="seccion categorias" id="categorias">
+            <p class="etiqueta">DESCUBRE TU ESTILO</p>
+
+            <h2>Una prenda para cada <em>momento</em></h2>
+
+            <div class="rejilla-categorias">
+
+                <a class="categoria" href="#catalogo" data-cat="vestidos">
+                    <img
+                        src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=800&q=90"
+                        alt="Colección de moda femenina"
+                    >
+                    <span>Vestidos <b>↗</b></span>
+                </a>
+
+                <a class="categoria" href="#catalogo" data-cat="conjuntos">
+                    <img
+                        src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=800&q=90"
+                        alt="Looks modernos para combinar"
+                    >
+                    <span>Conjuntos <b>↗</b></span>
+                </a>
+
+                <a class="categoria" href="#catalogo" data-cat="deportivo">
+                    <img
+                        src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=90"
+                        alt="Estilo urbano femenino"
+                    >
+                    <span>deportivos <b>↗</b></span>
+                </a>
+
+                <a class="categoria" href="#catalogo" data-cat="blusas">
+                    <img
+                        src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=800&q=90"
+                        alt="Prendas femeninas elegantes"
+                    >
+                    <span>Blusas <b>↗</b></span>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- CATÁLOGO -->
+        <section class="catalogo" id="catalogo">
+            <div class="seccion">
+                <p class="etiqueta">SELECCIÓN KAYLA</p>
+
+                <h2>Elige tus <em>favoritos</em></h2>
+
+                <p class="subtitulo">
+                    Consulta tallas, colores y disponibilidad por WhatsApp.
+                </p>
+
+                <div class="filtros">
+                    <button class="activo" data-filtro="todos">Todos</button>
+                    <button data-filtro="vestidos">Vestidos</button>
+                    <button data-filtro="conjuntos">Conjuntos</button>
+                    <button data-filtro="pantalones">Pantalones</button>
+                    <button data-filtro="blusas">Blusas</button>
+                    <button data-filtro="otros">Otros</button>
+                </div>
+
+                <div class="productos" id="productos"></div>
+            </div>
+        </section>
+
+        <!-- BENEFICIOS -->
+        <section class="beneficios">
+            <div>
+                ♡
+                <b>Estilo para ti</b>
+                <small>Looks que inspiran</small>
+            </div>
+
+            <div>
+                ✧
+                <b>Atención cercana</b>
+                <small>Te ayudamos a elegir</small>
+            </div>
+
+            <div>
+                ♧
+                <b>Pedidos fáciles</b>
+                <small>Compra por WhatsApp</small>
+            </div>
+        </section>
+
+        <!-- UBICACIÓN -->
+        <section class="ubicacion" id="ubicacion">
+            <div class="local-foto">
+                <img
+                    src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?auto=format&fit=crop&w=1100&q=90"
+                    alt="Interior de una tienda de moda"
+                >
+
+                <div class="letrero">
+                    KAYLA ♡
+                    <small>B O U T I Q U E</small>
+                </div>
+            </div>
+
+            <div class="local-texto">
+                <p class="etiqueta">VEN A CONOCERNOS</p>
+
+                <h2>Canalete, Córdoba</h2>
+
+                <em>Te esperamos ♡</em>
+
+                <p>
+                    Descubre tu estilo con Kayla Boutique.
+                    Escríbenos para consultar productos,
+                    tallas y disponibilidad.
+                </p>
+
+                <a
+                    class="boton"
+                    href="https://www.google.com/maps/search/?api=1&query=Canalete+C%C3%B3rdoba+Colombia"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    CÓMO LLEGAR →
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <a href="#inicio" class="logo">
+            KAYLA<span>♡</span>
+            <small>B O U T I Q U E</small>
+        </a>
+
+        <p>
+            Moda que te hace brillar ♡<br>
+            Canalete, Córdoba, Colombia.
+        </p>
+
+        <p>© <span id="year"></span> Kayla Boutique</p>
+    </footer>
+
+    <a
+        class="whatsapp"
+        href="https://wa.me/573001640580"
+        target="_blank"
+        rel="noopener"
+        aria-label="Contactar por WhatsApp"
+    >☏</a>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,737 @@
+:root {
+    --vino: #C17C91;
+    --vino2: #D69BAD;
+    --rosa: #F2C6D2;
+    --rosa2: #F8E5EA;
+    --fondo: #c98888;
+    --texto: #4A2936;
+    --blanco: #FFFCFA;
+}* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background: var(--fondo);
+    color: var(--texto);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+button {
+    font: inherit;
+    cursor: pointer;
+}
+
+/* BARRA SUPERIOR */
+
+.anuncio {
+    background: var(--rosa);
+    color: var(--vino);
+    padding: 9px;
+    text-align: center;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+}
+
+/* ENCABEZADO */
+
+.encabezado {
+    height: 78px;
+    background: var(--vino);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 7%;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 4px 18px #25020e25;
+}
+
+.logo {
+    font: 600 27px "Playfair Display", serif;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: var(--rosa);
+}
+
+.logo small {
+    display: block;
+    text-align: center;
+    color: var(--rosa);
+    font: 8px "DM Sans", sans-serif;
+    letter-spacing: 4px;
+    margin-top: 3px;
+}
+
+nav {
+    display: flex;
+    gap: 27px;
+}
+
+nav a {
+    font-size: 11px;
+    transition: color .2s;
+}
+
+nav a:hover {
+    color: var(--rosa);
+}
+
+.comprar {
+    background: var(--rosa);
+    color: var(--vino);
+    padding: 11px 18px;
+    border-radius: 24px;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.menu {
+    display: none;
+    background: none;
+    border: 0;
+    color: white;
+    font-size: 25px;
+}
+
+/* PORTADA */
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 450px;
+    background: radial-gradient(
+        ellipse at 30% 20%,
+        #C64D7D,
+        var(--vino) 72%
+    );
+    color: white;
+    overflow: hidden;
+}
+
+.hero-texto {
+    align-self: center;
+    padding: 45px 8% 42px 14%;
+}
+
+.etiqueta {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #FFB4D0;
+    margin-bottom: 12px;
+}
+
+.hero h1 {
+    font: 700 clamp(48px, 6vw, 78px)/.91 "Playfair Display", serif;
+    margin: 20px 0;
+}
+
+.hero h1 em {
+    color: var(--rosa);
+    font-style: normal;
+}
+
+.hero-texto > p:not(.etiqueta) {
+    font-size: 13px;
+    line-height: 1.8;
+    color: #FCE4EC;
+    max-width: 420px;
+    margin-bottom: 23px;
+}
+
+.boton {
+    display: inline-block;
+    background: var(--rosa);
+    color: var(--vino);
+    border-radius: 30px;
+    padding: 14px 21px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .5px;
+    transition: .2s;
+}
+
+.boton:hover {
+    background: #FFC6DA;
+    transform: translateY(-2px);
+}
+
+.detalles {
+    font-size: 9px;
+    color: #FCE4EC;
+    margin-top: 26px;
+    line-height: 2;
+}
+
+.hero-foto {
+    position: relative;
+    min-height: 450px;
+    overflow: hidden;
+}
+
+.hero-foto > img {
+    height: 100%;
+    min-height: 450px;
+    object-fit: cover;
+    object-position: center 25%;
+}
+
+.hero-foto::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, #35091b44, transparent 45%);
+    pointer-events: none;
+}
+
+.nota {
+    position: absolute;
+    z-index: 1;
+    right: 8%;
+    top: 35%;
+    font: italic 33px/1.1 "Allura", cursive;
+    color: var(--vino);
+    transform: rotate(-7deg);
+    text-align: center;
+}
+
+.sello {
+    position: absolute;
+    z-index: 2;
+    left: 20px;
+    bottom: 22px;
+    background: var(--rosa);
+    color: var(--vino);
+    padding: 13px 16px;
+    font-size: 9px;
+    letter-spacing: 2px;
+    line-height: 1.5;
+    transform: rotate(-5deg);
+}
+
+/* CATEGORÍAS */
+
+.seccion {
+    padding: 36px 7%;
+}
+
+.categorias {
+    background: linear-gradient(130deg, #FFF5F8, #F8C6DA);
+}
+
+h2 {
+    font: 600 clamp(27px, 3.2vw, 39px) "Playfair Display", serif;
+    margin-bottom: 18px;
+}
+
+h2 em {
+    color: #D64C7E;
+    font: normal 1.2em "Allura", cursive;
+}
+
+.rejilla-categorias {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 17px;
+}
+
+.categoria {
+    background: var(--rosa2);
+    overflow: hidden;
+    border-radius: 7px;
+    box-shadow: 0 7px 20px #6a163017;
+}
+
+.categoria img {
+    height: 220px;
+    object-fit: cover;
+    object-position: center 25%;
+    transition: transform .35s;
+}
+
+.categoria:hover img {
+    transform: scale(1.05);
+}
+
+.categoria span {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 13px;
+    font: 600 14px "Playfair Display", serif;
+}
+
+.categoria b {
+    color: #BD315F;
+    font-size: 20px;
+}
+
+/* CATÁLOGO */
+
+.catalogo {
+    background: radial-gradient(
+        ellipse at top right,
+        #C64D7D,
+        var(--vino) 65%
+    );
+    color: white;
+}
+
+.catalogo .seccion {
+    padding-top: 38px;
+    padding-bottom: 40px;
+}
+
+.catalogo h2 {
+    margin-bottom: 6px;
+}
+
+.subtitulo {
+    font-size: 11px;
+    color: #FCE4EC;
+    margin-bottom: 20px;
+}
+
+.filtros {
+    display: flex;
+    gap: 7px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.filtros button {
+    border: 1px solid #F3A0BC80;
+    border-radius: 22px;
+    padding: 9px 14px;
+    color: white;
+    background: transparent;
+    font-size: 10px;
+}
+
+.filtros button:hover,
+.filtros button.activo {
+    background: var(--rosa);
+    color: var(--vino);
+    border-color: var(--rosa);
+}
+
+.productos {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 17px;
+}
+
+.producto {
+    background: #FFFAFC;
+    color: var(--texto);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px #15000840;
+}
+
+.producto-foto {
+    height: 290px;
+    overflow: hidden;
+    position: relative;
+    background: #F8D5E2;
+}
+
+.producto-foto img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%;
+    transition: transform .3s;
+}
+
+.producto:hover .producto-foto img {
+    transform: scale(1.04);
+}
+
+.etiqueta-nuevo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: var(--rosa);
+    color: var(--vino);
+    padding: 6px 9px;
+    font-size: 8px;
+    letter-spacing: .5px;
+}
+
+.producto-info {
+    padding: 13px;
+}
+
+.producto h3 {
+    font: 600 15px "Playfair Display", serif;
+    min-height: 38px;
+}
+
+.tipo {
+    font-size: 9px;
+    text-transform: uppercase;
+    color: #A54C68;
+    letter-spacing: 1px;
+    margin: 5px 0 9px;
+}
+
+.precio {
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.pedir {
+    display: block;
+    text-align: center;
+    background: #D85D8A;
+    color: white;
+    border: 0;
+    width: 100%;
+    padding: 11px 5px;
+    border-radius: 25px;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.pedir:hover {
+    background: var(--vino);
+}
+
+/* BENEFICIOS */
+
+.beneficios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 23px 8%;
+    background: linear-gradient(100deg, #F4BDCF, #FFF0F5, #F4BDCF);
+}
+
+.beneficios div {
+    text-align: center;
+    color: var(--vino);
+    font-size: 24px;
+}
+
+.beneficios b,
+.beneficios small {
+    display: block;
+}
+
+.beneficios b {
+    font: 600 13px "Playfair Display", serif;
+    margin-top: 5px;
+}
+
+.beneficios small {
+    font: 10px "DM Sans", sans-serif;
+    color: #795263;
+    margin-top: 4px;
+}
+
+/* UBICACIÓN */
+
+.ubicacion {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: #FFF5F8;
+}
+
+.local-foto {
+    height: 310px;
+    position: relative;
+    overflow: hidden;
+}
+
+.local-foto > img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.letrero {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 22px;
+    background: #F8C6D9ED;
+    color: var(--vino);
+    text-align: center;
+    font: 25px "Playfair Display", serif;
+    white-space: nowrap;
+    box-shadow: 0 5px 20px #24020d35;
+}
+
+.letrero small {
+    display: block;
+    font: 8px "DM Sans", sans-serif;
+    letter-spacing: 4px;
+}
+
+.local-texto {
+    align-self: center;
+    padding: 35px 12%;
+}
+
+.local-texto h2 {
+    margin: 5px 0;
+}
+
+.local-texto > em {
+    display: block;
+    font: 36px "Allura", cursive;
+    color: #D74778;
+    margin-bottom: 8px;
+}
+
+.local-texto > p:not(.etiqueta) {
+    font-size: 12px;
+    line-height: 1.8;
+    color: #765563;
+    margin-bottom: 20px;
+}
+
+/* PIE DE PÁGINA */
+
+footer {
+    background: var(--vino);
+    color: white;
+    padding: 26px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+footer p {
+    font-size: 10px;
+    line-height: 1.8;
+    color: #F4D6DF;
+    text-align: center;
+}
+
+.whatsapp {
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    background: #19B968;
+    color: white;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 26px;
+    z-index: 20;
+    box-shadow: 0 5px 18px #0003;
+}
+
+/* TABLETAS */
+
+@media (max-width: 900px) {
+    .encabezado {
+        padding: 10px 4%;
+    }
+
+    nav {
+        gap: 13px;
+    }
+
+    .hero-texto {
+        padding-left: 8%;
+    }
+
+    .rejilla-categorias {
+        gap: 10px;
+    }
+
+    .categoria img {
+        height: 180px;
+    }
+
+    .productos {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .producto-foto {
+        height: 250px;
+    }
+
+    .seccion {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+}
+
+/* CELULARES */
+
+@media (max-width: 620px) {
+    .anuncio {
+        font-size: 7px;
+        letter-spacing: .5px;
+    }
+
+    .encabezado {
+        height: 68px;
+    }
+
+    .logo {
+        font-size: 23px;
+    }
+
+    .menu {
+        display: block;
+        margin-left: auto;
+        margin-right: 12px;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 68px;
+        left: 0;
+        right: 0;
+        background: var(--vino);
+        padding: 20px;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    nav.abierto {
+        display: flex;
+    }
+
+    .comprar {
+        padding: 10px 12px;
+        font-size: 9px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-texto {
+        padding: 38px 7% 28px;
+    }
+
+    .hero h1 {
+        font-size: 57px;
+    }
+
+    .hero-foto {
+        min-height: 350px;
+        max-height: 430px;
+    }
+
+    .hero-foto > img {
+        min-height: 350px;
+    }
+
+    .seccion {
+        padding: 28px 5%;
+    }
+
+    .rejilla-categorias {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .categoria img {
+        height: 210px;
+    }
+
+    .productos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .producto-foto {
+        height: 230px;
+    }
+
+    .producto-info {
+        padding: 10px;
+    }
+
+    .producto h3 {
+        font-size: 13px;
+    }
+
+    .precio {
+        font-size: 12px;
+    }
+
+    .pedir {
+        font-size: 9px;
+    }
+
+    .filtros {
+        gap: 5px;
+    }
+
+    .filtros button {
+        padding: 8px 10px;
+    }
+
+    .beneficios {
+        grid-template-columns: 1fr;
+        padding: 22px 8%;
+        gap: 18px;
+    }
+
+    .beneficios div {
+        font-size: 20px;
+    }
+
+    .ubicacion {
+        grid-template-columns: 1fr;
+    }
+
+    .local-foto {
+        height: 240px;
+    }
+
+    .local-texto {
+        padding: 28px 7% 34px;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+        padding: 25px 5%;
+    }
+}
+
+@media (max-width: 370px) {
+    .producto-foto {
+        height: 190px;
+    }
+
+    .categoria img {
+        height: 175px;
+    }
+}
